@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/GenericStateWithParameterContractTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="233">
+              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -389,7 +389,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20149253" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20149253" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -404,7 +404,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.35536295" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.35536295" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -422,13 +422,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/GenericStateWithParameterContractTest.java</url>
-          <line>62</line>
+          <line>57</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/GenericStateWithParameterContractTest.java</url>
-          <line>65</line>
+          <line>60</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -445,12 +445,6 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/GenericStateWithParameterContractTest.java</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/au/com/dius/pact-jvm-provider-junit_2.12/3.5.24/pact-jvm-provider-junit_2.12-3.5.24.jar!/au/com/dius/pact/provider/junit/loader/PactBrokerLoader.class</url>
           <line>62</line>
           <properties />
@@ -458,7 +452,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/GenericStateWithParameterContractTest.java</url>
-          <line>48</line>
+          <line>43</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
@@ -719,8 +713,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/GenericStateWithParameterContractTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="233">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
         </state>
       </provider>
     </entry>

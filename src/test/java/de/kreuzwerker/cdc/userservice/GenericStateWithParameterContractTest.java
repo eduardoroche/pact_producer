@@ -39,11 +39,6 @@ public class GenericStateWithParameterContractTest {
     @MockBean
     private UserService userService;
 
-    @Before
-    public void setUp() {
-        //userService = Mockito.mock(UserService.class);
-    }
-
     @State("default")
     public void toDefaultState(Map<String, Object> params) {
         final boolean userExists = (boolean) params.get("userExists");
