@@ -30,7 +30,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 //@IgnoreNoPactsToVerify
 //pact_broker is the service name in docker-compose
 //, tags = "${pactbroker.tags:prod}"
-@PactBroker(host = "pact_broker", tags = "${pactbroker.tags:prod}")
+@PactBroker(host = "pact_broker", tags = "${pactbroker.tags:master}")
 public class GenericStateWithParameterContractTest {
 
     @TestTarget
