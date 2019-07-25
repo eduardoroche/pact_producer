@@ -47,6 +47,7 @@ public class GenericStateWithParameterContractTest {
     @State("default")
     public void toDefaultState(Map<String, Object> params) {
         final boolean userExists = (boolean) params.get("userExists");
+        System.out.println("USER EXISTS? " + userExists);
         if (userExists) {
             User user = new User();
             user.setId("1");
