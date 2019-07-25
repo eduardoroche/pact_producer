@@ -26,7 +26,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 //@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 //pact_broker is the service name in docker-compose
 //, tags = "${pactbroker.tags:prod}"
-@PactBroker(host = "172.18.0.4", port="82", tags = "${pactbroker.tags:prod}")
+@PactBroker(host = "pact_broker", port="80", tags = "${pactbroker.tags:prod}")
 public class GenericStateWithParameterContractTest {
 
     @TestTarget
