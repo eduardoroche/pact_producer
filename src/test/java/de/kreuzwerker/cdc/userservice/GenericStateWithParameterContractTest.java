@@ -49,6 +49,7 @@ public class GenericStateWithParameterContractTest {
         final boolean userExists = (boolean) params.get("userExists");
         System.out.println("USER EXISTS? " + userExists);
         if (userExists) {
+            System.out.println("blablabla");
             User user = new User();
             user.setId("1");
             user.setLegacyId(UUID.randomUUID().toString());
@@ -61,6 +62,7 @@ public class GenericStateWithParameterContractTest {
             user.setFriends(friends);
             when(userService.findUser(any())).thenReturn(user);
         } else {
+            System.out.println("hehehe");
             when(userService.findUser(any())).thenThrow(NotFoundException.class);
         }
     }
