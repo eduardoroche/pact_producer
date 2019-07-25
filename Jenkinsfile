@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-		sh "mvn clean verify"
+		sh "mvn clean verify -Dpact.provider.version=${GIT_COMMIT} -Dpact.verifier.publishResults=true'"
       }
     }
     stage('Check Pact Verifications') {
