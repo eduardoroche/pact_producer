@@ -3,6 +3,7 @@ package de.kreuzwerker.cdc.userservice;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
+import au.com.dius.pact.provider.junit.IgnoreNoPactsToVerify;
 import au.com.dius.pact.provider.junit.PactRunner;
 import au.com.dius.pact.provider.junit.Provider;
 import au.com.dius.pact.provider.junit.State;
@@ -21,16 +22,17 @@ import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-@RunWith(PactRunner.class)
+@RunWith(SpringRestPactRunner.class)
 @Provider("user-service")
-//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@IgnoreNoPactsToVerify
 //pact_broker is the service name in docker-compose
 //, tags = "${pactbroker.tags:prod}"
 @PactBroker(host = "pact_broker", port="80", tags = "${pactbroker.tags:prod}")
 public class GenericStateWithParameterContractTest {
 
     @TestTarget
-    public final Target target = new HttpTarget(5050);
+    public final Target target = new SpringBootHttpTarget(5050);
 
     //@MockBean
     private UserService userService;

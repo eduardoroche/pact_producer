@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: de.kreuzwerker.cdc.userservice.MockedUserServiceContractTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.013 s - in de.kreuzwerker.cdc.userservice.MockedUserServiceContractTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.021 s - in de.kreuzwerker.cdc.userservice.MockedUserServiceContractTest
