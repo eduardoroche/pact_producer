@@ -36,12 +36,12 @@ public class GenericStateWithParameterContractTest {
     @TestTarget
     public final Target target = new SpringBootHttpTarget();
 
-    //@MockBean
+    @MockBean
     private UserService userService;
 
     @Before
     public void setUp() {
-        userService = Mockito.mock(UserService.class);
+        //userService = Mockito.mock(UserService.class);
     }
 
     @State("default")
