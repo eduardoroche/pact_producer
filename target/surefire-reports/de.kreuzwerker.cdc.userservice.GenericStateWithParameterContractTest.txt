@@ -1,4 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: de.kreuzwerker.cdc.userservice.GenericStateWithParameterContractTest
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.272 s - in de.kreuzwerker.cdc.userservice.GenericStateWithParameterContractTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 11.937 s <<< FAILURE! - in de.kreuzwerker.cdc.userservice.GenericStateWithParameterContractTest
+initializationError(de.kreuzwerker.cdc.userservice.GenericStateWithParameterContractTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.Exception: Did not find any pact files for provider user-service
+
