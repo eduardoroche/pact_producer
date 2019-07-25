@@ -34,7 +34,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 public class GenericStateWithParameterContractTest {
 
     @TestTarget
-    public final Target target = new SpringBootHttpTarget(5050);
+    public final Target target = new SpringBootHttpTarget();
 
     //@MockBean
     private UserService userService;
