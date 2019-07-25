@@ -47,17 +47,17 @@ public class GenericStateWithParameterContractTest {
     @State("default")
     public void toDefaultState(Map<String, Object> params) {
         final boolean userExists = (boolean) params.get("userExists");
-        User user = new User();
-        user.setId("1");
-        user.setLegacyId(UUID.randomUUID().toString());
-        user.setName("Beth");
-        user.setRole(UserRole.ADMIN);
-        user.setLastLogin(new Date());
-        List<Friend> friends = new ArrayList<>();
-        friends.add(new Friend("2", "Ronald Smith"));
-        friends.add(new Friend("3", "Matt Spencer"));
-        user.setFriends(friends);
         if (userExists) {
+            User user = new User();
+            user.setId("1");
+            user.setLegacyId(UUID.randomUUID().toString());
+            user.setName("Beth");
+            user.setRole(UserRole.ADMIN);
+            user.setLastLogin(new Date());
+            List<Friend> friends = new ArrayList<>();
+            friends.add(new Friend("2", "Ronald Smith"));
+            friends.add(new Friend("3", "Matt Spencer"));
+            user.setFriends(friends);
             when(userService.findUser(any())).thenReturn(user);
         } else {
             when(userService.findUser(any())).thenThrow(NotFoundException.class);
