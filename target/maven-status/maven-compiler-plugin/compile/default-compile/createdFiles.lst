@@ -1,0 +1,9 @@
+de\kreuzwerker\cdc\userservice\UserService.class
+de\kreuzwerker\cdc\userservice\NotFoundException.class
+de\kreuzwerker\cdc\userservice\UserController.class
+de\kreuzwerker\cdc\userservice\UserRole.class
+de\kreuzwerker\cdc\userservice\User.class
+de\kreuzwerker\cdc\userservice\Friend$FriendBuilder.class
+de\kreuzwerker\cdc\userservice\Friend.class
+de\kreuzwerker\cdc\userservice\GlobalControllerExceptionHandler.class
+de\kreuzwerker\cdc\userservice\UserServiceApplication.class

@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: de.kreuzwerker.cdc.userservice.GenericStateWithParameterContractTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.804 s <<< FAILURE! - in de.kreuzwerker.cdc.userservice.GenericStateWithParameterContractTest
+initializationError(de.kreuzwerker.cdc.userservice.GenericStateWithParameterContractTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class de.kreuzwerker.cdc.userservice.UserService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 12
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 12.0.1+12
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 12.0.1+12
+JVM info           : mixed mode, sharing
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.UnsupportedOperationException: Cannot define class using reflection
+Caused by: java.lang.UnsupportedOperationException: Cannot define class using reflection
+Caused by: java.lang.IllegalStateException: Could not find sun.misc.Unsafe
+Caused by: java.lang.NoSuchMethodException: sun.misc.Unsafe.defineClass(java.lang.String,[B,int,int,java.lang.ClassLoader,java.security.ProtectionDomain)
+
