@@ -19,6 +19,7 @@ import au.com.dius.pact.provider.spring.target.SpringBootHttpTarget;
 import java.util.*;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -31,6 +32,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 //pact_broker is the service name in docker-compose
 //, tags = "${pactbroker.tags:prod}"
 @PactBroker(host = "pact_broker", tags = "${pactbroker.tags:master}")
+@Ignore
 public class GenericStateWithParameterContractTest {
 
     @TestTarget
@@ -42,7 +44,6 @@ public class GenericStateWithParameterContractTest {
     @State("default")
     public void toDefaultState(Map<String, Object> params) {
         final boolean userExists = (boolean) params.get("userExists");
-        System.out.println("USER EXISTS? " + userExists);
         if (userExists) {
             System.out.println("blablabla");
             User user = new User();
