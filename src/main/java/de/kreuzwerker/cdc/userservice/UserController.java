@@ -13,7 +13,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/users/ab/{userId}")
+    @GetMapping("/users/{userId}")
     public User getUser(@PathVariable String userId) {
         return userService.findUser(userId);
     }
