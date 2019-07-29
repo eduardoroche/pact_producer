@@ -15,24 +15,9 @@ pipeline {
 	maven 'maven'
   }
 
-  pipeline {
-
-    agent any
-
-    environment {
-      BRANCH_NAME=env.GIT_BRANCH.replace("origin/", "")
-    }
-
-    parameters {
-      string(name: 'pactConsumerTags', defaultValue: 'master')
-    }
-
-    tools {
-      maven 'maven'
-    }
-
+  stages {
     stages {
-      stage ('Get Latest Prod Version From Pact Broker') {
+      stage('Get Latest Prod Version From Pact Broker') {
         steps {
           sh 'curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.61.1/pact-1.61.1-linux-x86_64.tar.gz'
           sh 'tar xzf pact-1.61.1-linux-x86_64.tar.gz'
@@ -50,18 +35,17 @@ pipeline {
         }
       }
 
-      stage ('Run Contract Tests') {
+      stage('Run Contract Tests') {
         steps {
-            sh "mvn clean test " +
+          dir('user-service') {
+            sh "../mvnw clean test " +
                     "-Pcontract-tests " +
                     "-Dpact.provider.version=${PROD_VERSION} " +
                     "-Dpact.verifier.publishResults=true " +
                     "-Dpactbroker.tags=prod,${params.pactConsumerTags}"
-
+          }
         }
       }
     }
-
   }
-
 }
