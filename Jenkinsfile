@@ -18,7 +18,12 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-		sh "mvn clean verify -Dpact.provider.version=${GIT_COMMIT} -Dpact.verifier.publishResults=true  -Dpactbroker.tags=${params.pactConsumerTags} -Dpact.tag=${BRANCH_NAME}"
+		sh "mvn clean verify -Dpact.provider.version=${GIT_COMMIT} -Dpact.verifier.publishResults=true  -Dpactbroker.tags=${params.pactConsumerTags}"
+      }
+    }
+    stage('Publish Pacts') {
+      steps {
+        sh 'mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=${BRANCH_NAME}'
       }
     }
     stage('Check Pact Verifications') {
