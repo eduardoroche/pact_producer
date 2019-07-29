@@ -15,7 +15,6 @@ pipeline {
 	maven 'maven'
   }
 
-  #!groovy
   pipeline {
 
     agent any
