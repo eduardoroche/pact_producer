@@ -3,9 +3,12 @@ pipeline {
 
   agent any
 
+  environment {
+    BRANCH_NAME=env.GIT_BRANCH.replace("origin/", "")
+  }
 
   parameters {
-    string(name: 'pactConsumerTags', defaultValue: 'test-label2')
+    string(name: 'pactConsumerTags', defaultValue: 'test-label3')
   }
 
   tools {
