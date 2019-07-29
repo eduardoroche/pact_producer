@@ -5,7 +5,7 @@ pipeline {
 
 
   parameters {
-    string(name: 'pactConsumerTags', defaultValue: 'test')
+    string(name: 'pactConsumerTags', defaultValue: 'test-label')
   }
 
   tools {
