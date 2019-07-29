@@ -8,7 +8,7 @@ pipeline {
   }
 
   parameters {
-    string(name: 'pactConsumerTags', defaultValue: 'test-label6')
+    string(name: 'pactConsumerTags', defaultValue: 'test-label7')
   }
 
   tools {
@@ -19,11 +19,6 @@ pipeline {
     stage ('Build') {
       steps {
 		sh "mvn clean verify -Dpact.provider.version=${GIT_COMMIT} -Dpact.verifier.publishResults=true  -Dpactbroker.tags=${params.pactConsumerTags}"
-      }
-    }
-    stage('Publish Pacts') {
-      steps {
-        sh 'mvn pact:publish -Dpact.provider.version=${GIT_COMMIT} -Dpact.tag=${BRANCH_NAME}'
       }
     }
     stage('Check Pact Verifications') {
