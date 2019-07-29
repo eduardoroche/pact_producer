@@ -2,7 +2,12 @@
 pipeline {
 
   agent any
-  
+
+
+  parameters {
+    string(name: 'pactConsumerTags', defaultValue: 'master')
+  }
+
   tools {
 	maven 'maven'
   }
@@ -10,7 +15,7 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-		sh "mvn clean verify -Dpact.provider.version=${GIT_COMMIT} -Dpact.verifier.publishResults=true"
+		sh "mvn clean verify -Dpact.provider.version=${GIT_COMMIT} -Dpact.verifier.publishResults=true  -Dpactbroker.tags=${params.pactConsumerTags}"
       }
     }
     stage('Check Pact Verifications') {
