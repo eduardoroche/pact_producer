@@ -41,7 +41,7 @@ pipeline {
     stage('Tag Pact') {
       steps {
         dir('pact/bin') {
-          //sh "./pact-broker create-version-tag -a user-service -b http://pact_broker -e ${GIT_COMMIT} -t prod"
+          sh "./pact-broker create-version-tag -a user-service -b http://pact_broker -e ${GIT_COMMIT} -t prod"
         }
       }
     }
