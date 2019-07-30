@@ -26,7 +26,7 @@ pipeline {
         sh 'curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.61.1/pact-1.61.1-linux-x86_64.tar.gz'
         sh 'tar xzf pact-1.61.1-linux-x86_64.tar.gz'
         dir('pact/bin') {
-          sh "./pact-broker can-i-deploy -a user-service -b http://pact_broker -e ${GIT_COMMIT}"
+          sh "./pact-broker can-i-deploy -a user-service -b http://pact_broker -e ${GIT_COMMIT} --to prod"
         }
       }
     }
@@ -38,13 +38,13 @@ pipeline {
         echo 'Deploying to prod now...'
       }
     }
-    /*stage('Tag Pact') {
+    stage('Tag Pact') {
       steps {
         dir('pact/bin') {
           sh "./pact-broker create-version-tag -a user-service -b http://pact_broker -e ${GIT_COMMIT} -t prod"
         }
       }
-    }*/
+    }
   }
 
   /**stages {
