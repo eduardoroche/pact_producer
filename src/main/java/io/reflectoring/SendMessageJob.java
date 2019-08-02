@@ -25,7 +25,7 @@ class SendMessageJob {
 			UserCreatedMessage userCreatedMessage = UserCreatedMessage.builder()
 							.messageUuid(UUID.randomUUID().toString())
 							.user(User.builder()
-											.id("aaa")
+											.id("44")
 											.name("Zaphpod Beeblebrox")
 											.build())
 							.build();
