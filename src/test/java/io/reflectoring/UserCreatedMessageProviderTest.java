@@ -25,6 +25,7 @@ import static org.mockito.Mockito.*;
 @Provider("user-service")
 //@PactFolder("../pact-message-consumer/target/pacts")
 //@SpringBootTest(classes = MessageProviderConfiguration.class)
+@SpringBootTest
 @PactBroker(host = "pact_broker", tags = "${pactbroker.tags:master}")
 public class UserCreatedMessageProviderTest {
 
