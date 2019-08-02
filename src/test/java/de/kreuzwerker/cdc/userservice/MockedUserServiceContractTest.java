@@ -4,6 +4,7 @@ import au.com.dius.pact.provider.junit.PactRunner;
 import au.com.dius.pact.provider.junit.Provider;
 import au.com.dius.pact.provider.junit.State;
 import au.com.dius.pact.provider.junit.loader.PactBroker;
+import au.com.dius.pact.provider.junit.target.HttpTarget;
 import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
 import au.com.dius.pact.provider.spring.target.SpringBootHttpTarget;
@@ -28,7 +29,7 @@ import static org.mockito.Mockito.when;
 public class MockedUserServiceContractTest {
 
     @TestTarget
-    public final Target target = new SpringBootHttpTarget();
+    public final Target target = new HttpTarget(8989);
 
     @MockBean
     private UserService userService;
