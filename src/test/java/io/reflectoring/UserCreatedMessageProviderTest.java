@@ -22,7 +22,7 @@ import static org.mockito.Mockito.*;
 
 @RunWith(SpringRestPactRunner.class)
 @Provider("user-service")
-@SpringBootTest
+@SpringBootTest(classes=MessageProviderConfiguration.class)
 //@PactFolder("../pact-message-consumer/target/pacts")
 @PactBroker(host = "pact_broker", tags = "${pactbroker.tags:master}")
 public class UserCreatedMessageProviderTest {
