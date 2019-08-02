@@ -60,6 +60,6 @@ public class UserCreatedMessageProviderTest {
 		verify(publisher, times(1)).publishMessage("{\"messageUuid\":\"689129ab-8e6e-44c4-abde-7b9fac4364c6\",\"user\":{\"id\":4238994195100213922,\"name\":\"Zaphpod Beeblebrox\"}}", eq("user.created"));
 
 		// returning the message
-		return messageCapture.getValue();
+		return "{\"messageUuid\":\"689129ab-8e6e-44c4-abde-7b9fac4364c6\",\"user\":{\"id\":4238994195100213922,\"name\":\"Zaphpod Beeblebrox\"}}";
 	}
 }
