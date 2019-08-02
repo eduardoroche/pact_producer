@@ -39,8 +39,8 @@ class MessageProviderConfiguration {
 	}
 
 	@Bean
-	MessagePublisher messagePublisher(RabbitTemplate rabbitTemplate, TopicExchange topicExchange) {
-		return new MessagePublisher(rabbitTemplate, topicExchange);
+	MessagePublisher messagePublisher() {
+		return new MessagePublisher();
 	}
 
 	@Bean
