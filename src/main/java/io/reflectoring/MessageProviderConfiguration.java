@@ -18,8 +18,8 @@ class MessageProviderConfiguration {
 
 
 	@Bean
-	MessageProducer messageProvider(ObjectMapper objectMapper, MessagePublisher publisher) {
-		return new MessageProducer(objectMapper, publisher);
+	MessageProducer messageProvider(MessagePublisher publisher) {
+		return new MessageProducer(publisher);
 	}
 
 	@Bean

@@ -13,16 +13,14 @@ class MessageProducer {
 
 	private Logger logger = LoggerFactory.getLogger(MessageProducer.class);
 
-	private ObjectMapper objectMapper;
-
 	private MessagePublisher messagePublisher;
 
-	MessageProducer(ObjectMapper objectMapper, MessagePublisher messagePublisher) {
-		this.objectMapper = objectMapper;
+	MessageProducer(MessagePublisher messagePublisher) {
 		this.messagePublisher = messagePublisher;
 	}
 
 	void produceUserCreatedMessage(UserCreatedMessage message) throws IOException {
+		ObjectMapper objectMapper = new ObjectMapper();
 		String stringMessage = objectMapper.writeValueAsString(message);
 		messagePublisher.publishMessage(stringMessage, "user.created");
 		logger.info("Published message '{}'", stringMessage);
