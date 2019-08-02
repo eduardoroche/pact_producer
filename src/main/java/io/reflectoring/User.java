@@ -10,7 +10,7 @@ import lombok.Data;
 class User {
 
 	@NotNull
-	private String id;
+	private long id;
 
 	@NotNull
 	private String name;
