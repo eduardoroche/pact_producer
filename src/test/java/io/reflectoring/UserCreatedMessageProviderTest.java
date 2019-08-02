@@ -41,10 +41,10 @@ public class UserCreatedMessageProviderTest {
 
 	private MessageProducer messageProducer = new MessageProducer(publisher);
 
-	@State("some state")
-	public void someProviderState() {
-		//when(any()).thenReturn(42L);
-	}
+	//@State("some state")
+	//public void someProviderState() {
+	//	when(any()).thenReturn(42L);
+	//}
 
 	@PactVerifyProvider("a user created message")
 	public String verifyUserCreatedMessage() throws IOException {
