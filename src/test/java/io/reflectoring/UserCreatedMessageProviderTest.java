@@ -35,7 +35,7 @@ public class UserCreatedMessageProviderTest {
 	//public final Target target = new CustomAmqpTarget(Collections.singletonList("io.reflectoring"));
 
 	@TestTarget
-	public final Target target = new AmqpTarget();
+	public final Target target = new CustomAmqpTarget(Collections.singletonList("io.reflectoring"));
 
 	private MessagePublisher publisher = Mockito.mock(MessagePublisher.class);
 
