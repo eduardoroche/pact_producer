@@ -35,7 +35,7 @@ public class MockedUserServiceContractTest {
     @MockBean
     private UserService userService;
 
-    @State("User 1 exists")
+    @State("User 3 exists")
     public void user1Exists() {
         User user = new User();
         user.setId("1");
