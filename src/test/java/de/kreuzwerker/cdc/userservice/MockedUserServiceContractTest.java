@@ -51,6 +51,22 @@ public class MockedUserServiceContractTest {
         //when(userService.findUser(any())).thenThrow(NotFoundException.class)
     }
 
+    @State("User 1 exists")
+    public void user1Exists1() {
+        User user = new User();
+        user.setId("1");
+        user.setLegacyId(UUID.randomUUID().toString());
+        user.setName("Beth");
+        user.setRole(UserRole.ADMIN);
+        user.setLastLogin(new Date());
+        List<Friend> friends = new ArrayList<>();
+        friends.add(new Friend("2", "Ronald Smith"));
+        friends.add(new Friend("3", "Matt Spencer"));
+        user.setFriends(friends);
+        when(userService.findUser(any())).thenReturn(user);
+        //when(userService.findUser(any())).thenThrow(NotFoundException.class)
+    }
+
     @State("User 2 does not exist")
     public void user2DoesNotExist() {
         when(userService.findUser(any())).thenThrow(NotFoundException.class);
