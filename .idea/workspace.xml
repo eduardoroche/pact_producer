@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ab06456-44b8-4f4e-b94a-a49428625398" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/reflectoring/MessageProviderConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/reflectoring/MessageProviderConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/reflectoring/UserCreatedMessageProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/reflectoring/UserCreatedMessageProviderTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/reflectoring/MessageProviderConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="244">
@@ -104,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/io/reflectoring/UserCreatedMessageProviderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+            <state relative-caret-position="119">
+              <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -173,9 +173,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/io/reflectoring/SendMessageJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/reflectoring/MessageProducer.java" />
-        <option value="$PROJECT_DIR$/src/test/java/io/reflectoring/UserCreatedMessageProviderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/kreuzwerker/cdc/userservice/UserServiceApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/reflectoring/MessageProviderConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/test/java/io/reflectoring/UserCreatedMessageProviderTest.java" />
       </list>
     </option>
   </component>
@@ -912,13 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/io/reflectoring/UserCreatedMessageProviderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/kreuzwerker/cdc/userservice/UserServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -939,6 +932,13 @@
             <element signature="e#1425#1426#0" expanded="true" />
             <element signature="e#1474#1475#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/io/reflectoring/UserCreatedMessageProviderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
         </state>
       </provider>
     </entry>

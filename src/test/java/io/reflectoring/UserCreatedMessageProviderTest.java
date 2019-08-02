@@ -16,12 +16,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
+import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.mockito.Mockito.*;
 
 @RunWith(SpringRestPactRunner.class)
 @Provider("user-service")
+@EnableRabbit
 @SpringBootTest(classes=MessageProviderConfiguration.class)
 //@PactFolder("../pact-message-consumer/target/pacts")
 @PactBroker(host = "pact_broker", tags = "${pactbroker.tags:master}")
