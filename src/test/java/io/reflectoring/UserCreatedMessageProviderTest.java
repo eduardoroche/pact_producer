@@ -18,15 +18,17 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.DirtiesContext;
 
 import static org.mockito.Mockito.*;
 
-@RunWith(PactRunner.class)
+@RunWith(SpringRestPactRunner.class)
 @Provider("user-service")
 //@PactFolder("../pact-message-consumer/target/pacts")
 //@SpringBootTest(classes = MessageProviderConfiguration.class)
-//@SpringBootTest
+@SpringBootTest
 @PactBroker(host = "pact_broker", tags = "${pactbroker.tags:master}")
+@DirtiesContext
 public class UserCreatedMessageProviderTest {
 
 	@TestTarget
