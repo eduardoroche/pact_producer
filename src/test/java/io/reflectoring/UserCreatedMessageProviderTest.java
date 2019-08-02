@@ -24,12 +24,12 @@ import org.springframework.test.annotation.DirtiesContext;
 import static org.mockito.Mockito.*;
 
 @RunWith(SpringRestPactRunner.class)
-@Provider("user-service")
+@Provider("user-service-messaging")
 //@PactFolder("../pact-message-consumer/target/pacts")
 //@SpringBootTest(classes = MessageProviderConfiguration.class)
 @SpringBootTest(classes = MessageProviderConfiguration.class)
 @PactBroker(host = "pact_broker", tags = "${pactbroker.tags:master}")
-@PactFilter({"provider creates user message"})
+//@PactFilter({"provider creates user message"})
 @DirtiesContext
 public class UserCreatedMessageProviderTest {
 

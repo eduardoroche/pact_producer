@@ -26,7 +26,7 @@ import static org.mockito.Mockito.when;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 //@Ignore
 @PactBroker(host = "pact_broker", tags = "${pactbroker.tags:master}")
-@PactFilter({"provider test users"})
+//@PactFilter({"provider test users"})
 public class MockedUserServiceContractTest {
 
     @TestTarget
