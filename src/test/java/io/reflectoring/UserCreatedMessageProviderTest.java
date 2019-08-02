@@ -53,9 +53,9 @@ public class UserCreatedMessageProviderTest {
 
 		// when
 		UserCreatedMessage message = UserCreatedMessage.builder()
-						//.messageUuid(UUID.randomUUID().toString())
+						.messageUuid(UUID.randomUUID().toString())
 						.user(User.builder()
-										.id(42L)
+										.id(44L)
 										.name("Zaphod")
 										.build())
 						.build();
