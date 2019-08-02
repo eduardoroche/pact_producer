@@ -30,7 +30,7 @@ import static org.mockito.Mockito.when;
 public class MockedUserServiceContractTest {
 
     @TestTarget
-    public final Target target = new HttpTarget(8989);
+    public final Target target = new SpringBootHttpTarget();
 
     private UserService userService = Mockito.mock(UserService.class);
 
