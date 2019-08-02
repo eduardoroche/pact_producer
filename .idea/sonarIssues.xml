@@ -113,6 +113,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/UserServiceApplicationTests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/test/java/io/reflectoring/UserCreatedMessageProviderTest.java">
           <value>
             <set />
