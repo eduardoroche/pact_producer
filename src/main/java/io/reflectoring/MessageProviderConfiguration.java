@@ -19,7 +19,7 @@ class MessageProviderConfiguration {
 	}
 
 
-	@Bean
+	/*@Bean
 	public ConnectionFactory connectionFactory() {
 		CachingConnectionFactory connectionFactory = new CachingConnectionFactory("localhost");
 		connectionFactory.setUsername("guest");
@@ -31,7 +31,7 @@ class MessageProviderConfiguration {
 	public RabbitTemplate rabbitTemplate() {
 		RabbitTemplate template = new RabbitTemplate(connectionFactory());
 		return template;
-	}
+	}*/
 
 	@Bean
 	MessageProducer messageProvider(MessagePublisher publisher) {
