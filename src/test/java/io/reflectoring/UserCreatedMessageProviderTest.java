@@ -32,7 +32,7 @@ public class UserCreatedMessageProviderTest {
 
 	private MessagePublisher publisher = Mockito.mock(MessagePublisher.class);
 
-	private MessageProducer messageProducer = new MessageProducer(new ObjectMapper(), publisher);
+	private MessageProducer messageProducer = new MessageProducer(publisher);
 
 	@PactVerifyProvider("a user created message")
 	public String verifyUserCreatedMessage() throws IOException {
