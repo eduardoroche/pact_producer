@@ -25,12 +25,7 @@ import static org.mockito.Mockito.*;
 
 @RunWith(PactRunner.class)
 @Provider("user-service-messaging")
-//@PactFolder("../pact-message-consumer/target/pacts")
-//@SpringBootTest(classes = MessageProviderConfiguration.class)
-//@SpringBootTest(classes = MessageProviderConfiguration.class)
 @PactBroker(host = "pact_broker", tags = "${pactbroker.tags:master}")
-//@PactFilter({"provider creates user message"})
-@DirtiesContext
 public class UserCreatedMessageProviderTest {
 
 	@TestTarget
@@ -57,8 +52,8 @@ public class UserCreatedMessageProviderTest {
 
 		// then
 		ArgumentCaptor<String> messageCapture = ArgumentCaptor.forClass(String.class);
-		//"{\"messageUuid\":\"689129ab-8e6e-44c4-abde-7b9fac4364c6\",\"user\":{\"id\":4238994195100213922,\"name\":\"Zaphpod Beeblebrox\"}}"
-		verify(publisher, times(1)).publishMessage(messageCapture.capture(), eq("user.created"));
+		//"{\"messageUuid\":\"689129ab-8e6e-44c4-abde-7b9fac4364c6\",\"user\":{\"id\":4238994195100213922,\"name\":\"Zaphpod\"}}"
+		verify(publisher, times(1)).publishMessage("abc", eq("user.created"));
 
 		// returning the message
 		return messageCapture.getValue();
