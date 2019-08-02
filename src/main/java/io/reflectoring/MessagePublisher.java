@@ -8,17 +8,17 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
  */
 class MessagePublisher {
 
-	private RabbitTemplate rabbitTemplate;
+	//private RabbitTemplate rabbitTemplate;
 
 	private TopicExchange topicExchange;
 
-	MessagePublisher(RabbitTemplate rabbitTemplate, TopicExchange topicExchange) {
-		this.rabbitTemplate = rabbitTemplate;
+	MessagePublisher(TopicExchange topicExchange) {
+		//this.rabbitTemplate = rabbitTemplate;
 		this.topicExchange = topicExchange;
 	}
 
 	void publishMessage(String message, String routingKey) {
-		rabbitTemplate.convertAndSend(topicExchange.getName(), routingKey, message);
+		//rabbitTemplate.convertAndSend(topicExchange.getName(), routingKey, message);
 	}
 
 }
