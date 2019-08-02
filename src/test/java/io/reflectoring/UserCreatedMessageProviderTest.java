@@ -1,19 +1,22 @@
 package io.reflectoring;
 
 import java.io.IOException;
-import java.util.Collections;
-import java.util.UUID;
+import java.util.*;
 
 import au.com.dius.pact.provider.PactVerifyProvider;
 import au.com.dius.pact.provider.junit.PactRunner;
 import au.com.dius.pact.provider.junit.Provider;
+import au.com.dius.pact.provider.junit.State;
 import au.com.dius.pact.provider.junit.loader.PactBroker;
 import au.com.dius.pact.provider.junit.loader.PactFilter;
 import au.com.dius.pact.provider.junit.loader.PactFolder;
+import au.com.dius.pact.provider.junit.target.AmqpTarget;
 import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
 import au.com.dius.pact.provider.spring.SpringRestPactRunner;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import de.kreuzwerker.cdc.userservice.Friend;
+import de.kreuzwerker.cdc.userservice.UserRole;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
@@ -28,12 +31,20 @@ import static org.mockito.Mockito.*;
 @PactBroker(host = "pact_broker", tags = "${pactbroker.tags:master}")
 public class UserCreatedMessageProviderTest {
 
+	//TestTarget
+	//public final Target target = new CustomAmqpTarget(Collections.singletonList("io.reflectoring"));
+
 	@TestTarget
-	public final Target target = new CustomAmqpTarget(Collections.singletonList("io.reflectoring"));
+	public final Target target = new AmqpTarget();
 
 	private MessagePublisher publisher = Mockito.mock(MessagePublisher.class);
 
 	private MessageProducer messageProducer = new MessageProducer(publisher);
+
+	@State("some state")
+	public void someProviderState() {
+		//when(any()).thenReturn(42L);
+	}
 
 	@PactVerifyProvider("a user created message")
 	public String verifyUserCreatedMessage() throws IOException {
@@ -42,7 +53,7 @@ public class UserCreatedMessageProviderTest {
 
 		// when
 		UserCreatedMessage message = UserCreatedMessage.builder()
-						.messageUuid(UUID.randomUUID().toString())
+						//.messageUuid(UUID.randomUUID().toString())
 						.user(User.builder()
 										.id(42L)
 										.name("Zaphod")
@@ -56,6 +67,7 @@ public class UserCreatedMessageProviderTest {
 		verify(publisher, times(1)).publishMessage(messageCapture.capture(), eq("user.created"));
 
 		// returning the message
-		return "abc";
+		System.out.println("ABC: " + messageCapture.getValue());
+		return messageCapture.getValue();
 	}
 }
