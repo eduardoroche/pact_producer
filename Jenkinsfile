@@ -28,6 +28,7 @@ pipeline {
         dir('pact/bin') {
             // --to prod -- set it in case you want to deploy the PROD
           sh "./pact-broker can-i-deploy -a user-service -b http://pact_broker -e ${GIT_COMMIT}"
+          sh "./pact-broker can-i-deploy -a user-service-messaging -b http://pact_broker -e ${GIT_COMMIT}"
         }
       }
     }
