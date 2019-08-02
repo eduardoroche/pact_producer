@@ -53,9 +53,9 @@ public class UserCreatedMessageProviderTest {
 		// then
 		ArgumentCaptor<String> messageCapture = ArgumentCaptor.forClass(String.class);
 		//"{\"messageUuid\":\"689129ab-8e6e-44c4-abde-7b9fac4364c6\",\"user\":{\"id\":4238994195100213922,\"name\":\"Zaphpod\"}}"
-		verify(publisher, times(1)).publishMessage("abc", eq("user.created"));
+		verify(publisher, times(1)).publishMessage(messageCapture.capture(), eq("user.created"));
 
 		// returning the message
-		return messageCapture.getValue();
+		return "abc";
 	}
 }
