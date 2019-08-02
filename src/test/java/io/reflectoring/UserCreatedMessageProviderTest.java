@@ -22,7 +22,7 @@ import org.springframework.test.annotation.DirtiesContext;
 
 import static org.mockito.Mockito.*;
 
-@RunWith(PactRunner.class)
+@RunWith(SpringRestPactRunner.class)
 @Provider("user-service")
 //@PactFolder("../pact-message-consumer/target/pacts")
 //@SpringBootTest(classes = MessageProviderConfiguration.class)
