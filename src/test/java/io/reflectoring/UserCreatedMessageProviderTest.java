@@ -21,10 +21,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.mockito.Mockito.*;
 
-@RunWith(SpringRestPactRunner.class)
+@RunWith(PactRunner.class)
 @Provider("user-service")
-@EnableRabbit
-@SpringBootTest(classes=MessageProviderConfiguration.class)
 //@PactFolder("../pact-message-consumer/target/pacts")
 @PactBroker(host = "pact_broker", tags = "${pactbroker.tags:master}")
 public class UserCreatedMessageProviderTest {
