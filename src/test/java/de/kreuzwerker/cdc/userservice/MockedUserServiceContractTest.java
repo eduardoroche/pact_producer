@@ -1,19 +1,15 @@
 package de.kreuzwerker.cdc.userservice;
 
-import au.com.dius.pact.provider.junit.PactRunner;
 import au.com.dius.pact.provider.junit.Provider;
 import au.com.dius.pact.provider.junit.State;
 import au.com.dius.pact.provider.junit.loader.PactBroker;
-import au.com.dius.pact.provider.junit.target.HttpTarget;
 import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
 import au.com.dius.pact.provider.spring.SpringRestPactRunner;
 import au.com.dius.pact.provider.spring.target.SpringBootHttpTarget;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.annotation.DirtiesContext;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -29,13 +25,13 @@ import static org.mockito.Mockito.when;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 //@Ignore
 @PactBroker(host = "pact_broker", tags = "${pactbroker.tags:master}")
-@DirtiesContext
 public class MockedUserServiceContractTest {
 
     @TestTarget
     public final Target target = new SpringBootHttpTarget();
 
-    private UserService userService = Mockito.mock(UserService.class);
+    @MockBean
+    private UserService userService;
 
     @State("User 1 exists")
     public void user1Exists() {
