@@ -3,6 +3,7 @@ package de.kreuzwerker.cdc.userservice;
 import au.com.dius.pact.provider.junit.Provider;
 import au.com.dius.pact.provider.junit.State;
 import au.com.dius.pact.provider.junit.loader.PactBroker;
+import au.com.dius.pact.provider.junit.loader.PactFilter;
 import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
 import au.com.dius.pact.provider.spring.SpringRestPactRunner;
@@ -25,6 +26,7 @@ import static org.mockito.Mockito.when;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 //@Ignore
 @PactBroker(host = "pact_broker", tags = "${pactbroker.tags:master}")
+@PactFilter({"provider test users"})
 public class MockedUserServiceContractTest {
 
     @TestTarget

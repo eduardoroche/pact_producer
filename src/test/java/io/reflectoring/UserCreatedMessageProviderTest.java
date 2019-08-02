@@ -8,6 +8,7 @@ import au.com.dius.pact.provider.PactVerifyProvider;
 import au.com.dius.pact.provider.junit.PactRunner;
 import au.com.dius.pact.provider.junit.Provider;
 import au.com.dius.pact.provider.junit.loader.PactBroker;
+import au.com.dius.pact.provider.junit.loader.PactFilter;
 import au.com.dius.pact.provider.junit.loader.PactFolder;
 import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
@@ -26,8 +27,9 @@ import static org.mockito.Mockito.*;
 @Provider("user-service")
 //@PactFolder("../pact-message-consumer/target/pacts")
 //@SpringBootTest(classes = MessageProviderConfiguration.class)
-@SpringBootTest
+@SpringBootTest(classes = MessageProviderConfiguration.class)
 @PactBroker(host = "pact_broker", tags = "${pactbroker.tags:master}")
+@PactFilter({"provider creates user message"})
 @DirtiesContext
 public class UserCreatedMessageProviderTest {
 
