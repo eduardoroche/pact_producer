@@ -98,6 +98,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/io/reflectoring/User.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/io/reflectoring/UserCreatedMessage.java">
           <value>
             <set />
