@@ -9,6 +9,7 @@ import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
 import au.com.dius.pact.provider.spring.target.SpringBootHttpTarget;
 import org.junit.runner.RunWith;
+import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
@@ -31,8 +32,7 @@ public class MockedUserServiceContractTest {
     @TestTarget
     public final Target target = new HttpTarget(8989);
 
-    @MockBean
-    private UserService userService;
+    private UserService userService = Mockito.mock(UserService.class);
 
     @State("User 1 exists")
     public void user1Exists() {
