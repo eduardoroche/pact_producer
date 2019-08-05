@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/MockedUserServiceContractTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="46" column="42" lean-forward="true" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+            <state relative-caret-position="272">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,23 +88,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/reflectoring/MessageProviderConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-              <folding>
-                <element signature="e#1148#1149#0" expanded="true" />
-                <element signature="e#1192#1193#0" expanded="true" />
-                <element signature="e#1239#1240#0" expanded="true" />
-                <element signature="e#1275#1276#0" expanded="true" />
-                <element signature="e#1338#1339#0" expanded="true" />
-                <element signature="e#1387#1388#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -293,6 +276,36 @@
             <path>
               <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: au.com.dius:pact-jvm-provider-spring_2.12:3.5.24" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: au.com.dius:pact-jvm-provider-spring_2.12:3.5.24" type="70bed36:NamedLibraryElementNode" />
+              <item name="pact-jvm-provider-spring_2.12-3.5.24.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: au.com.dius:pact-jvm-provider-spring_2.12:3.5.24" type="70bed36:NamedLibraryElementNode" />
+              <item name="pact-jvm-provider-spring_2.12-3.5.24.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: au.com.dius:pact-jvm-provider-spring_2.12:3.5.24" type="70bed36:NamedLibraryElementNode" />
+              <item name="pact-jvm-provider-spring_2.12-3.5.24.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -719,9 +732,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/io/reflectoring/UserMessage.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/io/reflectoring/MessageConsumerConfiguration.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/io/reflectoring/DemoApplication.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/au/com/dius/pact-jvm-provider-spring_2.12/3.5.24/pact-jvm-provider-spring_2.12-3.5.24.jar!/au/com/dius/pact/provider/spring/target/SpringBootHttpTarget.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/kreuzwerker/cdc/userservice/UserServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -878,10 +888,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/au/com/dius/pact-jvm-provider-spring_2.12/3.5.24/pact-jvm-provider-spring_2.12-3.5.24.jar!/au/com/dius/pact/provider/spring/target/SpringBootHttpTarget.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/MockedUserServiceContractTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="46" column="42" lean-forward="true" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+        <state relative-caret-position="272">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -40,14 +40,14 @@ public class MockedUserServiceContractTest {
         User user = new User();
         user.setId("3");
         user.setLegacyId(UUID.randomUUID().toString());
-        user.setName("Beth");
+       // user.setName("Beth");
         user.setRole(UserRole.ADMIN);
         user.setLastLogin(new Date());
         List<Friend> friends = new ArrayList<>();
         friends.add(new Friend("2", "Ronald Smith"));
         friends.add(new Friend("3", "Matt Spencer"));
         user.setFriends(friends);
-        when(userService.findUser(any())).thenReturn(new User());
+        when(userService.findUser(any())).thenReturn(user);
         //when(userService.findUser(any())).thenThrow(NotFoundException.class);
     }
 
