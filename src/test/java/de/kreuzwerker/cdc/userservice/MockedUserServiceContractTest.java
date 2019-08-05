@@ -40,7 +40,7 @@ public class MockedUserServiceContractTest {
         User user = new User();
         user.setId("3");
         user.setLegacyId(UUID.randomUUID().toString());
-       // user.setName("Beth");
+        user.setName("Beth");
         user.setRole(UserRole.ADMIN);
         user.setLastLogin(new Date());
         List<Friend> friends = new ArrayList<>();
