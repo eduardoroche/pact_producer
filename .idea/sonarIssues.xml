@@ -113,6 +113,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/GenericStateWithParameterContractTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/MockedUserServiceContractTest.java">
           <value>
             <set />
@@ -124,6 +129,36 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/test/java/io/reflectoring/UserCreatedMessageProviderTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../darwin-core-commons-readstore-testapp/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../darwin-core-commons-readstore-testapp/src/main/java/com/roche/commons/readstore/app/repository/InheritanceViewModelMongoDbRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../darwin-core-commons-readstore-testapp/src/main/java/com/roche/commons/readstore/app/repository/MongoDbLotViewModelRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../darwin-core-commons-readstore/roche-commons-readstore-test/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../pact_poc/infinity-lis-gen-reports/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../pact_poc/infinity-lis-gen-reports/src/main/java/src/database/ws/SoapExecutor.java">
           <value>
             <set />
           </value>

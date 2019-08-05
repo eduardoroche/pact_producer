@@ -47,7 +47,7 @@ public class GenericStateWithParameterContractTest {
         if (userExists) {
             System.out.println("blablabla");
             User user = new User();
-            user.setId("1");
+            user.setId("2");
             user.setLegacyId(UUID.randomUUID().toString());
             user.setName("Beth");
             user.setRole(UserRole.ADMIN);
