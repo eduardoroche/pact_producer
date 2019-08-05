@@ -56,7 +56,7 @@ public class GenericStateWithParameterContractTest {
             friends.add(new Friend("2", "Ronald Smith"));
             friends.add(new Friend("3", "Matt Spencer"));
             user.setFriends(friends);
-            when(userService.findUser(any())).thenReturn(user);
+            //when(userService.findUser(any())).thenReturn(user);
         } else {
             System.out.println("hehehe");
             when(userService.findUser(any())).thenThrow(NotFoundException.class);
