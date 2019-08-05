@@ -38,7 +38,7 @@ public class MockedUserServiceContractTest {
     @State("User 3 exists")
     public void user1Exists() {
         User user = new User();
-        user.setId(null);
+        user.setId("3");
         user.setLegacyId(UUID.randomUUID().toString());
         user.setName("Beth");
         user.setRole(UserRole.ADMIN);
@@ -47,7 +47,7 @@ public class MockedUserServiceContractTest {
         friends.add(new Friend("2", "Ronald Smith"));
         friends.add(new Friend("3", "Matt Spencer"));
         user.setFriends(friends);
-        when(userService.findUser(any())).thenReturn(user);
+        when(userService.findUser(any())).thenReturn(new User());
         //when(userService.findUser(any())).thenThrow(NotFoundException.class);
     }
 
