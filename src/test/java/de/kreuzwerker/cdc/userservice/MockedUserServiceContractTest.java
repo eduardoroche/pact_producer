@@ -38,7 +38,7 @@ public class MockedUserServiceContractTest {
     @State("User 3 exists")
     public void user1Exists() {
         User user = new User();
-        user.setId("1");
+        user.setId("3");
         user.setLegacyId(UUID.randomUUID().toString());
         user.setName("Beth");
         user.setRole(UserRole.ADMIN);

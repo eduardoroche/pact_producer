@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ab06456-44b8-4f4e-b94a-a49428625398" name="Default Changelist" comment="" />
+    <list default="true" id="1ab06456-44b8-4f4e-b94a-a49428625398" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/MockedUserServiceContractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/MockedUserServiceContractTest.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,20 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/GenericStateWithParameterContractTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
+            <state relative-caret-position="499">
               <caret line="53" column="42" lean-forward="true" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/MockedUserServiceContractTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
+            <state relative-caret-position="227">
+              <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,6 +151,7 @@
       <find>a user created message</find>
       <find>PactVerifyProvider</find>
       <find>dir</find>
+      <find>user1Exists</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,11 +176,11 @@
         <option value="$PROJECT_DIR$/src/main/java/io/reflectoring/MessageProviderConfiguration.java" />
         <option value="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/UserServiceApplicationTests.java" />
         <option value="$PROJECT_DIR$/Jenkinsfile" />
-        <option value="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/MockedUserServiceContractTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/reflectoring/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/reflectoring/SendMessageJob.java" />
         <option value="$PROJECT_DIR$/src/test/java/io/reflectoring/UserCreatedMessageProviderTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/GenericStateWithParameterContractTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/MockedUserServiceContractTest.java" />
       </list>
     </option>
   </component>
@@ -868,20 +872,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/MockedUserServiceContractTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/GenericStateWithParameterContractTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="499">
+          <caret line="53" column="42" lean-forward="true" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/GenericStateWithParameterContractTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/userservice/MockedUserServiceContractTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="53" column="42" lean-forward="true" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
+        <state relative-caret-position="227">
+          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
