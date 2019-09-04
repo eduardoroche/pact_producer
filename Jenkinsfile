@@ -8,7 +8,7 @@ pipeline {
   }
 
   parameters {
-    string(name: 'pactConsumerTags', defaultValue: 'tag-21')
+    string(name: 'pactConsumerTags', defaultValue: 'tag-22')
   }
 
   tools {
@@ -18,7 +18,8 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-		sh "mvn clean verify -Dpact.provider.version=${GIT_COMMIT} -Dpactbroker.url=${PACT_BROKER_URL} -Dpactbroker.port=${PACT_BROKER_PORT} -Dpact.verifier.publishResults=true  -Dpactbroker.tags=prod,${params.pactConsumerTags}"
+      // it is possible set prod as tag
+		sh "mvn clean verify -Dpact.provider.version=${GIT_COMMIT} -Dpactbroker.url=${PACT_BROKER_URL} -Dpactbroker.port=${PACT_BROKER_PORT} -Dpact.verifier.publishResults=true  -Dpactbroker.tags=${params.pactConsumerTags}"
       }
     }
     stage('Check Pact Verifications') {
