@@ -5,10 +5,12 @@ pipeline {
 
   environment {
     BRANCH_NAME=env.GIT_BRANCH.replace("origin/", "")
+    PACT_BROKER_URL=env.PACT_BROKER_URL
+    PACT_BROKER_PORT=env.PACT_BROKER_PORT
   }
 
   parameters {
-    string(name: 'pactConsumerTags', defaultValue: 'master')
+    string(name: 'pactConsumerTags', defaultValue: 'tag-20')
   }
 
   tools {
@@ -18,7 +20,7 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-		sh "mvn clean verify -Dpact.provider.version=${GIT_COMMIT} -Dpact.verifier.publishResults=true  -Dpactbroker.tags=prod,${params.pactConsumerTags}"
+		sh "mvn clean verify -Dpact.provider.version=${GIT_COMMIT} -Dpactbroker.url=${PACT_BROKER_URL} -Dpactbroker.port=${PACT_BROKER_PORT} -Dpact.verifier.publishResults=true  -Dpactbroker.tags=prod,${params.pactConsumerTags}"
       }
     }
     stage('Check Pact Verifications') {
