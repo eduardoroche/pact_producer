@@ -19,7 +19,7 @@ pipeline {
     stage ('Build') {
       steps {
       // it is possible set prod as tag
-      sh "echo `version ${params.pactConsumerTags}`"
+      echo "version ${params.pactConsumerTags}"
 		sh "mvn clean verify -Dpact.provider.version=${GIT_COMMIT} -Dpactbroker.url=${PACT_BROKER_URL} -Dpactbroker.port=${PACT_BROKER_PORT} -Dpact.verifier.publishResults=true  -Dpactbroker.tags=${params.pactConsumerTags}"
       }
     }
