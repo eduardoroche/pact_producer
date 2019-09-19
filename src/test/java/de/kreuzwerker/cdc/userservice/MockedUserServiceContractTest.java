@@ -45,7 +45,7 @@ public class MockedUserServiceContractTest {
         user.setLastLogin(new Date());
         List<Friend> friends = new ArrayList<>();
         friends.add(new Friend("2", "Ronald Smith"));
-        friends.add(new Friend("3", "Matt Spencer"));
+        friends.add(new Friend("3", "Matt Sspencer"));
         user.setFriends(friends);
         when(userService.findUser(any())).thenReturn(user);
         //when(userService.findUser(any())).thenThrow(NotFoundException.class);
