@@ -47,8 +47,8 @@ public class MockedUserServiceContractTest {
         friends.add(new Friend("2", "Ronald Smith"));
         friends.add(new Friend("3", "Matt Sspencer"));
         user.setFriends(friends);
-        when(userService.findUser(any())).thenReturn(user);
-        //when(userService.findUser(any())).thenThrow(NotFoundException.class);
+        //when(userService.findUser(any())).thenReturn(user);
+        when(userService.findUser(any())).thenThrow(NotFoundException.class);
     }
 
     @State("User 1 exists")
